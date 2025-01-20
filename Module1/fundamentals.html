@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML and CSS Comprehensive Example">
+  <title>HTML and CSS Fundamentals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Heading Tags -->
+  <h1>Main Heading (H1)</h1>
+  <h2>Subheading (H2)</h2>
+  <h3>Sub-subheading (H3)</h3>
+  <h4>Subsection Heading (H4)</h4>
+  <h5>Small Heading (H5)</h5>
+  <h6>Smallest Heading (H6)</h6>
+
+  <!-- Paragraphs and Text Formatting -->
+  <p>This is a paragraph. HTML allows you to structure text with <b>bold</b>, <i>italic</i>, <u>underlined</u>, and <mark>highlighted</mark> text.</p>
+  <p>You can also use <sup>superscript</sup> and <sub>subscript</sub>.</p>
+
+  <!-- Links and Images -->
+  <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+  <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+  <!-- Lists -->
+  <h2>Lists</h2>
+  <ul>
+    <li>Unordered List Item 1</li>
+    <li>Unordered List Item 2</li>
+    <li>Unordered List Item 3</li>
+  </ul>
+  <ol>
+    <li>Ordered List Item 1</li>
+    <li>Ordered List Item 2</li>
+    <li>Ordered List Item 3</li>
+  </ol>
+  <dl>
+    <dt>Definition Term</dt>
+    <dd>Definition Description</dd>
+  </dl>
+
+  <!-- Tables -->
+  <h2>Table</h2>
+  <table border="1">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+    <tr>
+      <td>Data 3</td>
+      <td>Data 4</td>
+    </tr>
+  </table>
+
+  <!-- Forms -->
+  <h2>Form</h2>
+  <form action="#" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <fieldset>
+      <legend>Interests</legend>
+      <label><input type="checkbox" name="interests" value="coding"> Coding</label>
+      <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+      <label><input type="checkbox" name="interests" value="reading"> Reading</label>
+    </fieldset>
+
+    <label><input type="radio" name="subscribe" value="yes" required> Subscribe to newsletter</label>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Semantic Tags -->
+  <header>
+    <h2>Header Section</h2>
+    <p>This is the header of the page.</p>
+  </header>
+  <article>
+    <h2>Article Section</h2>
+    <p>This is a standalone content section.</p>
+  </article>
+  <section>
+    <h2>Section Tag</h2>
+    <p>This is a section grouping related content.</p>
+  </section>
+  <footer>
+    <h2>Footer Section</h2>
+    <p>© 2025 All Rights Reserved</p>
+  </footer>
+</body>
+</html>

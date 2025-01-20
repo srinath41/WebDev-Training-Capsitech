@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2.5em;
+    color: #1a73e8;
+    text-align: center;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    color: #555;
+  }
+  
+  /* Paragraphs and Links */
+  p {
+    margin-bottom: 15px;
+  }
+  
+  a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin: 10px 0;
+    padding-left: 40px;
+  }
+  
+  dl {
+    margin: 20px 0;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
+  
+  dd {
+    margin-left: 20px;
+  }
+  
+  /* Table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Form */
+  form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background: #1a73e8;
+    color: white;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #1558a0;
+  }
+  
+  /* Header, Footer, Article, and Section */
+  header, footer, article, section {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
