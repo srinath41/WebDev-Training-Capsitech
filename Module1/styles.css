@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -8,7 +7,6 @@ body {
     color: #333;
   }
   
-  /* Headings */
   h1 {
     font-size: 2.5em;
     color: #1a73e8;
@@ -19,7 +17,6 @@ body {
     color: #555;
   }
   
-  /* Paragraphs and Links */
   p {
     margin-bottom: 15px;
   }
@@ -33,7 +30,6 @@ body {
     text-decoration: underline;
   }
   
-  /* Lists */
   ul, ol {
     margin: 10px 0;
     padding-left: 40px;
@@ -51,7 +47,6 @@ body {
     margin-left: 20px;
   }
   
-  /* Table */
   table {
     border-collapse: collapse;
     width: 100%;
@@ -68,7 +63,6 @@ body {
     background-color: #f4f4f4;
   }
   
-  /* Form */
   form {
     background: #fff;
     padding: 20px;
@@ -101,7 +95,6 @@ body {
     background: #1558a0;
   }
   
-  /* Header, Footer, Article, and Section */
   header, footer, article, section {
     margin: 20px;
     padding: 20px;
@@ -110,10 +103,9 @@ body {
     border-radius: 10px;
   }
   
-  /* Images */
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 10%;
+    height: 10%;
     border-radius: 5px;
   }
   
