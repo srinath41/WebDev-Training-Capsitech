@@ -1,0 +1,64 @@
+/* 1. CSS Combinators */
+
+        /* Descendant Combinator: Selects all <p> inside .container */
+        .container p {
+            color: blue;
+        }
+
+        /* Child Combinator: Selects only direct <p> children of .box */
+        .box > p {
+            color: green;
+        }
+
+        /* Adjacent Sibling Combinator: Selects the first <p> immediately after <h2> */
+        h2 + p {
+            font-size: 18px;
+            color: purple;
+        }
+
+        /* General Sibling Combinator: Selects all <p> elements that are siblings of <h2> */
+        h2 ~ p {
+            font-weight: bold;
+        }
+
+        /* 2. CSS Pseudo-Classes */
+
+        /* :hover pseudo-class: Change color when hovering over the button */
+        .btn:hover {
+            background-color: yellow;
+        }
+
+        /* :nth-child pseudo-class: Selects the second <li> and gives it a red color */
+        ul li:nth-child(2) {
+            color: red;
+        }
+
+        /* :first-child pseudo-class: Applies bold styling to the first <li> inside <ul> */
+        ul li:first-child {
+            font-weight: bold;
+        }
+
+        /* 3. CSS Pseudo-Elements */
+
+        /* ::before pseudo-element: Adds content before each .item */
+        .item::before {
+            content: "👉 ";
+            font-size: 20px;
+        }
+
+        /* ::after pseudo-element: Adds content after each .item */
+        .item::after {
+            content: " ✅";
+            font-size: 20px;
+        }
+
+        /* ::first-letter pseudo-element: Applies a larger font size and red color to the first letter */
+        .text::first-letter {
+            font-size: 3em;
+            color: red;
+        }
+
+        /* ::first-line pseudo-element: Makes the first line of text bold */
+        .text::first-line {
+            font-weight: bold;
+        }
