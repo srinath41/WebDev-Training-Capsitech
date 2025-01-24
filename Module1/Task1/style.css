@@ -1,0 +1,217 @@
+/* Base styles for the body and overall layout */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden ;
+    font-family: 'Inter', sans-serif;
+    background-color: #E0F8F2;
+}
+
+/* Header Section */
+.header-container {
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header {
+    width: 90%;
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 162px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: #2E2F35;
+}
+
+.nav-dropdown {
+    width: 10px;
+    height: 6px;
+    margin-left: 5px;
+}
+
+/* Button Styles */
+.button {
+    padding: 14px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login {
+    background: #FFFFFF;
+    border: 2px solid #2E2F35;
+    box-shadow: 3px 3px 0px #2E2F35;
+    color: #2E2F35;
+}
+
+.create-account {
+    background: #FF6D2C;
+    color: #FFFFFF;
+    border: 2px solid #2E2F35;
+    box-shadow: 3px 3px 0px #2E2F35;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1440px;
+    margin: 120px auto 0;
+    padding: 50px 0;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-heading {
+    font-size: 64px;
+    font-weight: 700;
+    color: #2E2F35;
+    line-height: 1.2;
+}
+
+.highlighted-word {
+    font-family: 'Covered By Your Grace', sans-serif;
+    color: #24ad86;
+}
+
+.hero-subheading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #58595D;
+    margin-top: 25px;
+}
+
+.try-risk-free {
+    display: inline-block;
+    background: #FF6D2C;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 2px solid #2E2F35;
+    box-shadow: 3px 3px 0px #2E2F35;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Posters Section */
+.posters {
+    display: flex;
+    position:absolute;
+    right: 0;
+    width: 650px;
+    height: 650px;
+}
+
+.poster1,
+.poster2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster2 {
+    top: 20px;
+    left: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.footer-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+}
+
+.rating-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2E2F35;
+    margin-left: 10px;
+    
+}
+
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+}
+
+.rating-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2E2F35;
+    margin-top: 5px;
+}
