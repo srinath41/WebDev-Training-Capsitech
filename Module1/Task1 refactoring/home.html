@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Navbar</title>
+</head>
+<body>
+    <nav class="absolute w-full h-[106px] bg-white flex items-center px-8">
+        <div class="w-[1290px] h-[65px] mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="w-[162.31px] h-[30px]">
+                <img src="postpilot-logo.svg" alt="PostPilot Logo" class="w-full h-full">
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="flex items-center gap-8 border-l-2 border-gray-200 pl-4">
+                <a href="#" class="text-[#2E2F35] text-sm font-medium">Success Stories</a>
+                <a href="#" class="text-[#2E2F35] text-sm font-medium">Pricing</a>
+                <div class="relative flex items-center gap-2 cursor-pointer">
+                    <span class="text-[#222222] text-sm font-medium">Resources</span>
+                    <img src="nav-dropdown.svg" alt="Dropdown" class="w-[10px] h-[6px]">
+                </div>
+                <div class="relative flex items-center gap-2 cursor-pointer">
+                    <span class="text-[#222222] text-sm font-medium">Company</span>
+                    <img src="nav-dropdown.svg" alt="Dropdown" class="w-[10px] h-[6px]">
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="px-6 py-3 border-2 border-[#2E2F35] shadow-md shadow-[#2E2F35] rounded-lg text-[#2E2F35] font-medium">Login</a>
+                <a href="#" class="px-6 py-3 bg-[#FF6D2C] border-2 border-[#2E2F35] shadow-md shadow-[#2E2F35] rounded-lg text-white font-medium">Create Free Account</a>
+            </div>
+        </div>
+    </nav>
+    <section class="relative w-full bg-[#E0F8F2] py-32 flex items-center justify-center">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
+        <!-- Left Section: Hero Text -->
+        <div class="max-w-2xl">
+            <h1 class="text-6xl font-bold text-[#2E2F35] leading-tight">
+                Meet your favorite new (old) marketing channel.
+            </h1>
+            <p class="mt-6 text-lg text-[#58595D]">
+                Remarkable results. Easier than email. Postcard marketing reinvented for modern ecommerce.
+            </p>
+            <div class="mt-8 flex gap-6">
+                <a href="#" class="px-8 py-4 bg-[#FF6D2C] text-white font-bold text-sm uppercase rounded-lg border-2 border-[#2E2F35] shadow-md hover:bg-[#e65a1f]">
+                    Try it Risk-free
+                </a>
+                <div class="flex items-center gap-2">
+                    <div class="flex gap-1">
+                        <span class="text-yellow-400 text-2xl">&#9733;</span>
+                        <span class="text-yellow-400 text-2xl">&#9733;</span>
+                        <span class="text-yellow-400 text-2xl">&#9733;</span>
+                        <span class="text-yellow-400 text-2xl">&#9733;</span>
+                        <span class="text-yellow-400 text-2xl">&#9733;</span>
+                    </div>
+                    <span class="text-[#2E2F35] text-lg">5.0 Shopify Rating</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Section: Hero Image -->
+        <div class="relative w-[650px] h-[650px]">
+            <img src="hero-1.webp" alt="Hero Image" class="absolute w-full h-full object-cover">
+        </div>
+    </div>
+    </section>
+    
+    <section class="absolute w-[1440px] h-[666.5px] left-[2px] top-[864px] bg-white">
+    <h2 class="absolute w-[650px] h-[157px] left-1/2 transform -translate-x-1/2 top-[106px] 
+        font-inter font-bold text-[63px] leading-[76px] text-[#2E2F35] text-center tracking-[-2px]">
+        Trusted by thousands of top DTC brands.
+    </h2>
+
+    <div class="absolute w-[4176px] h-[249.5px] left-[-982.86px] top-[321px] flex flex-row gap-[64px]">
+        <div class="flex flex-row gap-[64px] w-[2088px] h-[249.5px]">
+            <div class="w-[284px] h-[249.5px] relative">
+                <div class="absolute w-[284px] h-[193px] left-1/2 transform -translate-x-1/2 top-0 bg-cover bg-center" style="background-image: url('rungum.webp');"></div>
+                <div class="absolute w-[184.53px] h-[32px] left-1/2 transform -translate-x-1/2 top-[217px] bg-cover bg-center" style="background-image: url('rungum-logo.png');"></div>
+            </div>
+            <div class="w-[284px] h-[249.5px] relative">
+                <div class="absolute w-[283.61px] h-[192.86px] left-1/2 transform -translate-x-1/2 top-0 bg-cover bg-center" style="background-image: url('beardbrand.webp');"></div>
+                <div class="absolute w-[235.03px] h-[32px] left-1/2 transform -translate-x-1/2 top-[216.86px] bg-cover bg-center" style="background-image: url('beardbrand-logo.png');"></div>
+            </div>
+            <div class="w-[284px] h-[249.5px] relative">
+                <div class="absolute w-[284px] h-[193px] left-1/2 transform -translate-x-1/2 top-0 bg-cover bg-center" style="background-image: url('promix.webp');"></div>
+                <div class="absolute w-[166px] h-[32px] left-1/2 transform -translate-x-1/2 top-[217px] bg-cover bg-center" style="background-image: url('promix-logo.png');"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-row gap-[64px] w-[2088px] h-[249.5px]">
+            <div class="w-[284px] h-[249.5px] relative">
+                <div class="absolute w-[284px] h-[193.5px] left-1/2 transform -translate-x-1/2 top-0 bg-cover bg-center" style="background-image: url('scotch.webp');"></div>
+                <div class="absolute w-[60.5px] h-[32px] left-1/2 transform -translate-x-1/2 top-[217.5px] bg-cover bg-center" style="background-image: url('scotch-porter-logo.png');"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="direct-mail">
+        <h2>Why use direct mail? It works like crazy.</h2>
+        <div class="mail-stats">
+            <div class="stat">
+                <h3>28X</h3>
+                <p>Higher response rate than email & digital</p>
+            </div>
+            <div class="stat">
+                <img src="home-number-chart.webp" alt="Chart">
+                <p>Your messages get read</p>
+            </div>
+            <div class="stat">
+                <h3>17 Days</h3>
+                <p>Lifespan of a postcard vs. seconds for email or SMS</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

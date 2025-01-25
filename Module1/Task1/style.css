@@ -2,30 +2,15 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden ;
+    overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     background-color: #E0F8F2;
 }
 
 /* Header Section */
 .header-container {
-    position: fixed;
-    width: 100%;
-    height: 12%;
     top: 0;
     background: #FFFFFF;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.header {
-    width: 90%;
-    max-width: 1290px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
 }
 
 .logo {
@@ -33,14 +18,7 @@ body {
     height: auto;
 }
 
-.navigation {
-    display: flex;
-    gap: 20px;
-}
-
 .nav-item {
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -57,19 +35,7 @@ body {
 }
 
 /* Button Styles */
-.button {
-    padding: 14px 22px;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    border-radius: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
 .login {
-    background: #FFFFFF;
     border: 2px solid #2E2F35;
     box-shadow: 3px 3px 0px #2E2F35;
     color: #2E2F35;
@@ -83,20 +49,6 @@ body {
 }
 
 /* Hero Section */
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1440px;
-    margin: 120px auto 0;
-    padding: 50px 0;
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
 .hero-heading {
     font-size: 64px;
     font-weight: 700;
@@ -107,17 +59,16 @@ body {
 .highlighted-word {
     font-family: 'Covered By Your Grace', sans-serif;
     color: #24ad86;
+    font-weight: normal;
 }
 
 .hero-subheading {
     font-size: 20px;
     font-weight: 500;
     color: #58595D;
-    margin-top: 25px;
 }
 
 .try-risk-free {
-    display: inline-block;
     background: #FF6D2C;
     color: #FFFFFF;
     font-weight: 700;
@@ -127,15 +78,10 @@ body {
     border-radius: 15px;
     border: 2px solid #2E2F35;
     box-shadow: 3px 3px 0px #2E2F35;
-    margin-top: 20px;
-    text-decoration: none;
 }
 
 /* Posters Section */
 .posters {
-    display: flex;
-    position:absolute;
-    right: 0;
     width: 650px;
     height: 650px;
 }
@@ -153,65 +99,249 @@ body {
     left: 10px;
 }
 
-/* Footer */
-.footer {
+
+
+/* Brand Section*/
+/* Section */
+.trusted-brands-section {
+    width: 100%;
+    background: #FFFFFF;
+    padding-top: 100px; /* Space between sections */
+    padding-bottom: 60px;
+    position: relative;
+}
+
+/* Trusted by thousands of top DTC brands. */
+.trusted-heading {
     text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-}
-
-.footer-rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.rating-stars {
-    display: flex;
-    gap: 4px;
-}
-
-.star {
-    width: 24px;
-    height: 24px;
-}
-
-.rating-text {
-    font-size: 16px;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 76px;
+    letter-spacing: -2px;
     color: #2E2F35;
-    margin-left: 10px;
-    
+    margin-bottom: 40px; /* Space below the heading */
 }
 
-
-.cta-container {
+/* Trusted Brands Flex Layout */
+.trusted-brands {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0;
 }
 
-.rating-container {
+/* Brand Items */
+.brand-item {
+    width: 284px;
+    height: 249.5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: flex-end;
 }
 
-.rating-stars {
+/* Brand Image */
+.brand-image {
+    width: 284px;
+    height: 193px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Brand Name */
+.brand-name {
+    width: 184.53px;
+    height: 32px;
+    background-size: contain;
+    background-position: center;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+}
+
+
+/*direct mail section*/
+.direct-mail-section {
     display: flex;
-    gap: 4px;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Adjusted padding */
+    background: #E0F8F2;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust based on content */
 }
 
-.star {
-    width: 24px;
-    height: 24px;
-}
-
-.rating-text {
-    font-size: 16px;
-    font-weight: 500;
+/* Heading */
+.direct-mail-heading {
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.3;
+    letter-spacing: -2px;
     color: #2E2F35;
-    margin-top: 5px;
+    margin-bottom: 30px; /* Add space below heading */
 }
+
+/* Content layout */
+.direct-mail-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    width: 100%;
+    max-width: 1024px; /* Set max width to prevent stretching */
+}
+
+/* Mail item */
+.mail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 228px;
+    height: 322px; /* Increase height to fit both title and subtitle */
+}
+
+/* Title */
+.item-title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 2.5rem; /* Adjust font size */
+    line-height: 1;
+    color: #2E2F35;
+    margin-bottom: 10px; /* Add space below title */
+}
+
+/* Subtitle */
+.item-subtitle {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #58595D;
+    text-align: center;
+}
+
+/* Image */
+.item-image {
+    width: 100%;
+    height: 150px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.item-image img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/* Section Styling */
+.custom-section {
+    background-color: #FDF3EA;
+    padding: 75px;
+    position: relative;
+  }
+  
+  /* Headings */
+  .section-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 76px;
+    text-align: center;
+    color: #2E2F35;
+    letter-spacing: -2px;
+  }
+  
+  .feature-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Feature Descriptions */
+  .feature-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    color: #58595D;
+  }
+  
+  /* Testimonial Card */
+  .feature-card {
+    border: 2px solid #D1C7BE;
+    border-radius: 15px;
+    background-color: #FDF3EA;
+    position: relative;
+    padding: 34px;
+    gap: 16px;
+    box-sizing: border-box;
+    isolation: isolate;
+  }
+  
+  .testimonial-text {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #58595D;
+  }
+  
+  .author {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #A89B90;
+  }
+  
+  .author-logo {
+    width: 53px;
+    height: 23.98px;
+  }
+  
+  /* Double Quote Icon */
+  .quote-icon {
+    position: absolute;
+    top: -20px; /* Overlap the border */
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    z-index: 2;
+  }
+  
+  .quote-icon-background {
+    position: absolute;
+    top: -25px; /* Slightly behind the icon */
+    left: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: #FDF3EA;
+    border-radius: 50%;
+    z-index: 1; /* Below the quote icon */
+  }
+  
+  /* Call-to-Action Button */
+  .cta-btn {
+    background-color: #FF6D2C;
+    border: 2px solid #2E2F35;
+    box-shadow: 3px 3px 0px #2E2F35;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 22px 65px;
+  }
+  

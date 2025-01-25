@@ -7,47 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header-container">
-        <div class="header">
+    <header class="header-container fixed-top shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center py-3">
             <div class="logo-container">
                 <img src="Images/logo.jpg" alt="PostPilot Logo" class="logo">
             </div>
-            <nav class="navigation">
-                <div class="nav-item">
+            <nav class="navigation d-flex gap-4">
+                <div class="nav-item d-flex align-items-center">
                     <span class="nav-link">Resources</span>
                     <img src="Images/6324421d2084817a7c6267d5_nav-dropdown.svg.jpg" alt="Dropdown" class="nav-dropdown">
                 </div>
-                <div class="nav-item">
+                <div class="nav-item d-flex align-items-center">
                     <span class="nav-link">Success stories</span>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item d-flex align-items-center">
                     <span class="nav-link">Company</span>
                     <img src="Images/6324421d2084817a7c6267d5_nav-dropdown.svg.jpg" alt="Dropdown" class="nav-dropdown">
                 </div>
-                <div class="nav-item">
+                <div class="nav-item d-flex align-items-center">
                     <span class="nav-link">Pricing</span>
                 </div>
             </nav>
-            <div class="auth-buttons">
-                <a href="#" class="button login">Login</a>
-                <a href="#" class="button create-account">Create free account</a>
+            <div class="auth-buttons d-flex gap-3">
+                <a href="#" class="btn btn-outline-dark login">Login</a>
+                <a href="#" class="btn btn-warning create-account">Create free account</a>
             </div>
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-heading">Meet your 
+    <section class="hero-section container d-flex justify-content-between align-items-center py-5 mt-5">
+        <div class="hero-content max-w-lg">
+            <h1 class="hero-heading display-3">Meet your 
                 <br><span class="highlighted-word">favorite</span> new (old) marketing channel.</h1>
-            <p class="hero-subheading">Remarkable results. Easier than email. Postcard marketing reinvented for modern ecommerce.</p>
-            <div class="cta-container">
-                <a href="#" class="try-risk-free">Try it Risk-Free</a>
-                <div class="rating-container">
-                    <div class="rating-stars">
+            <p class="hero-subheading lead mt-3">Remarkable results. Easier than email. Postcard marketing reinvented for modern ecommerce.</p>
+            <div class="cta-container d-flex align-items-center gap-3 mt-4">
+                <a href="#" class="btn btn-danger try-risk-free">Try it Risk-Free</a>
+                <div class="rating-container d-flex flex-column align-items-center">
+                    <div class="rating-stars d-flex gap-1">
                         <img src="Images/6323a6a59dc3d3034055dd17_Star.svg.png" alt="Star" class="star">
                         <img src="Images/6323a6a59dc3d3034055dd17_Star.svg.png" alt="Star" class="star">
                         <img src="Images/6323a6a59dc3d3034055dd17_Star.svg.png" alt="Star" class="star">
@@ -57,14 +58,176 @@
                     <span class="rating-text">5.0 Shopify Rating</span>
                 </div>
             </div>
-            
         </div>
-        
 
-        <div class="posters">
-            <img src="Images/6373f7f03c5d3a2230a5793e_hero-1-p-1600.webp.png" alt="Marketing Example 1" class="poster1">
-            <img src="Images/6373f7edc7ac677820ea40f7_hero-1b-p-1600.webp.png" alt="Marketing Example 2" class="poster2">
+        <div class="posters position-relative">
+            <img src="Images/6373f7f03c5d3a2230a5793e_hero-1-p-1600.webp.png" alt="Marketing Example 1" class="poster1 w-100 h-100 object-fit-cover">
+            <img src="Images/6373f7edc7ac677820ea40f7_hero-1b-p-1600.webp.png" alt="Marketing Example 2" class="poster2 position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
         </div>
     </section>
+
+    <section class="trusted-brands-section">
+        <!-- Trusted by thousands of top DTC brands. -->
+        <h2 class="trusted-heading">
+            Trusted by thousands <br>of top DTC <span class="highlighted-word">brands.</span>
+        </h2>
+    
+        <div class="trusted-brands">
+            <!-- First brand -->
+            <div class="brand-item">
+                <div class="brand-image" style="background-image: url('Images/63286e5151c67921f0b8135a_rungum.png');"></div>
+                <div class="brand-name" style="background-image: url('Images/63286e5288280c81780b4c34_rungum.png.png');"></div>
+            </div>
+    
+            <!-- Second brand -->
+            <div class="brand-item">
+                <div class="brand-image" style="background-image: url('Images/63286ff1f1b6f25ee76f231b_BeardBrand.png');"></div>
+                <div class="brand-name" style="background-image: url('Images/63286e91cff7c9116930b4a0_beardbrand.png.png');"></div>
+            </div>
+    
+            <!-- Third brand -->
+            <div class="brand-item">
+                <div class="brand-image" style="background-image: url('Images/63286e9234618612154db22a.png');"></div>
+                <div class="brand-name" style="background-image: url('Images/6328726dc5bca9f6d4edfb0c_promix.png.png');"></div>
+            </div>
+        
+    
+        
+            <!-- Fourth brand -->
+            <div class="brand-item">
+                <div class="brand-image" style="background-image: url('Images/63286d1e1785f6f7514de479_scotch.webp.png');"></div>
+                <div class="brand-name" style="background-image: url('Images/6328725f3fcfbbbb09c24526_scotch-porter.png.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="direct-mail-section position-relative">
+        <!-- Why use direct mail? It works like crazy. -->
+        <h2 class="direct-mail-heading text-center">
+            Why use direct mail? <br>
+            It <span class="highlighted-word">works</span> like crazy.
+        </h2>
+    
+        <div class="direct-mail-content d-flex justify-content-between align-items-center position-relative">
+            <!-- First item -->
+            <div class="mail-item position-relative">
+                <div class="item-title">
+                    28X
+                </div>
+                <div class="item-subtitle">
+                    Higher response rate than email & digital
+                </div>
+            </div>
+    
+            <!-- Second item -->
+            <div class="mail-item position-relative">
+                <div class="item-image">
+                    <img src="Images/634434dadd8ea3e001bf8bd6_home.png">
+                </div>
+                <div class="item-subtitle">
+                    Your messages get read
+                </div>
+            </div>
+    
+            <!-- Third item -->
+            <div class="mail-item position-relative">
+                <div class="item-title">
+                    17 Days
+                </div>
+                <div class="item-subtitle">
+                    Lifespan of a postcard vs. seconds for email or SMS
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="custom-section py-5">
+        <div class="container">
+          <!-- Header -->
+          <h1 class="section-heading text-center">
+            PostPilot makes it a <span class="highlighted-word">cinch</span> to<br> send personalized, profit-<br>generating postcards.
+          </h1>
+      
+          <!-- Feature Row 1 -->
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+              <h2 class="feature-heading">
+                <span class="highlighted-word">Powerful</span> <br>
+                acquisition<br> & retention
+              </h2>
+              <p class="feature-description">
+                Send one-off or triggered campaigns to customers & prospects. Target email leads with MailMatch™.
+              </p>
+              <div class="feature-card p-4 position-relative">
+                <div class="quote-icon-background"></div>
+                <img src="Images/section3/6323a6a5ed516738feb2689c_Testimonial.png" alt="Quote Icon" class="quote-icon">
+                <p class="testimonial-text">
+                  It’s like Klaviyo for direct mail. The results are absolutely insane.
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="author">Ash Melwani, CMO</span>
+                  <img src="Images/section3/63245bf3b4ded2832fead006_image.png" alt="Company Logo" class="author-logo">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Feature Row 2 -->
+          <div class="row align-items-center mt-5 flex-row-reverse">
+            <div class="col-md-6">
+              <h2 class="feature-heading">
+                <span class="highlighted-word">Fight back</span> against iOS <br> updates, jacked-up<br> CPCs & spam folders
+              </h2>
+              <p class="feature-description">
+                Deliver your message to all of your customers — for less than the cost of a click.
+              </p>
+              <div class="feature-card p-4 position-relative">
+                <div class="quote-icon-background"></div>
+                <img src="Images/section3/6323a6a5ed516738feb2689c_Testimonial.png" alt="Quote Icon" class="quote-icon">
+                <p class="testimonial-text">
+                  PostPilot is our new weapon against sinking email engagement and rising PPC costs. The results and ROI have been outstanding. It’s now one of our core marketing channels to increase acquisition & LTV.
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="author">Leah Keith, GM</span>
+                  <img src="Images/section3/63246d142b3cde4f53dc7ae0_overlander.png" alt="Company Logo" class="author-logo">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Feature Row 3 -->
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+              <h2 class="section-heading">
+                Done for <span class="highlighted-word">you</span>
+              </h2>
+              <p class="feature-description">
+                From design & strategy to stamp-licking, our ecom experts help you every step of the way.
+              </p>
+              <div class="feature-card p-4 position-relative">
+                <div class="quote-icon-background"></div>
+                <img src="Images/section3/6323a6a5ed516738feb2689c_Testimonial.png" alt="Quote Icon" class="quote-icon">
+                <p class="testimonial-text">
+                  The team is so knowledgeable and beyond helpful. I’m blown away by their communication, detail, and attentiveness and always feel like they have our best interest in mind. Definitely worth a try.
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="author">Holly Davies, Marketing Director</span>
+                  <img src="Images/section3/63246eac9ce86053cd1cb31f_paragon.png" alt="Company Logo" class="author-logo">
+                </div>
+              </div>
+              <a href="#" class="cta-btn btn">
+                Try it RISK-free
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
