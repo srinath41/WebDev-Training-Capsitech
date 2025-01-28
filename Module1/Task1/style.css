@@ -41,11 +41,17 @@ body {
     color: #2E2F35;
 }
 
+
 .create-account {
     background: #FF6D2C;
     color: #FFFFFF;
     border: 2px solid #2E2F35;
     box-shadow: 3px 3px 0px #2E2F35;
+}
+
+.create-account:hover{
+  background: #ffffff;
+  border: 2px solid #2E2F35;
 }
 
 /* Hero Section */
@@ -78,6 +84,12 @@ body {
     border-radius: 15px;
     border: 2px solid #2E2F35;
     box-shadow: 3px 3px 0px #2E2F35;
+}
+
+.try-risk-free:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #2E2F35;
 }
 
 /* Posters Section */
@@ -345,3 +357,129 @@ body {
     padding: 22px 65px;
   }
   
+
+
+  /*section4*/
+
+  .card {
+    border: none;
+  }
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2E2F35;
+  }
+  .card-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #58595D;
+  }
+  
+
+/*postpilotX card*/
+
+/* Custom Card Styling */
+.custom-card {
+    width: 410px;
+    border-radius: 15px;
+    border: 2px solid #2E2F35;
+    background-color: #E3F8F8;
+  }
+  
+  .custom-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+  }
+  
+  /* Button Styling */
+  .custom-link {
+    border-radius: 15px;
+    box-shadow: 3px 3px 0px #2E2F35;
+    background-color: #FF6D2C;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: inline-block;
+    padding: 22px 66px;
+    width: 261px;
+    height: 64px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: white;
+  }
+  
+  .custom-link:hover {
+    background-color: #e65c26; /* Darker shade on hover */
+  }
+  
+
+  .GsHover{
+    box-shadow: 3px 3px 0px #2E2F35;
+    border: 2px solid #2E2F35;
+  }
+  .GsHover:hover{
+    background-color: #2E2F35;
+    color: white;
+    box-shadow: 3px 3px 0px #FF6D2C;
+    border: 2px solid #999999;
+  }
+
+
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .logo {
+      width: 140px;
+  }
+  
+  .hero-heading {
+      font-size: 48px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navigation {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+  }
+  
+  .hero-heading {
+      font-size: 36px;
+  }
+  
+  .logo {
+      width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+      padding: 10px 20px;
+  }
+  
+  .hero-heading {
+      font-size: 28px;
+  }
+  
+  .navigation {
+      padding-top: 20px;
+  }
+  
+  .logo {
+      width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-heading {
+      font-size: 24px;
+  }
+  
+  .logo {
+      width: 90px;
+  }
+}
