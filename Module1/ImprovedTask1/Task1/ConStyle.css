@@ -1,0 +1,515 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  padding-top: 100px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide desktop nav in mobile view */
+@media (max-width: 768px) {
+  .navigation,
+  .auth-buttons {
+      display: none !important;
+  }
+}
+
+/* Offcanvas styles */
+.offcanvas-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Show menu button only on mobile */
+@media (max-width: 768px) {
+  .menu-button {
+      display: block;
+  }
+}
+
+/* Header Section */
+.header-container {
+  top: 0;
+  background: #FFFFFF;
+}
+
+.logo {
+  width: 162px;
+  height: auto;
+}
+
+/* Navigation */
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  color: #2E2F35;
+}
+
+.nav-dropdown {
+  width: 10px;
+  height: 6px;
+  margin-left: 5px;
+}
+
+/* Button Styles */
+.login {
+  padding: 12px 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0px 0px #2e2f35;
+  color: #2e2f35;
+  transition: all 0.3s ease;
+}
+
+.create-account {
+  background-color: #ff6d2c;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0px 0px #2e2f35;
+  transition: all 0.3s ease;
+}
+
+.create-account:hover {
+  color: #000;
+  background: #ffffff;
+  border: 2px solid #2e2f35;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align everything to the left */
+  margin-bottom: 20px;
+}
+
+.underline-img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+
+.contact-header h1 {
+  font-weight: 600;
+  font-size: 58px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left; /* Align text properly */
+}
+
+
+h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 22px;
+  color: #545454;
+  line-height: 36px;
+}
+
+
+/* Background Color */
+.bg-light-blue {
+  background: #ECF3F3;
+}
+
+/* Form Container */
+.form-container {
+  background: #FDF3EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 1000px;
+  padding: 40px;
+  margin: auto;
+  position: relative;
+  overflow: auto;
+}
+
+/* Form Title */
+.form-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #2E2F35;
+}
+
+/* Input Fields */
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #808080 !important;
+  font-size: 16px;
+  color: #2E2F35;
+  background-color: #FDF3EA;
+  height: 50px;
+  padding: 10px;
+}
+
+/* Customize Checkbox */
+.form-check-input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #FF6D2C;
+border-radius: 4px;
+background-color: white;
+cursor: pointer;
+position: relative;
+}
+
+/* Add Checkmark */
+.form-check-input[type="checkbox"]:checked {
+background-color: #FF6D2C;
+border-color: #FF6D2C;
+}
+
+/* Customize Radio Button */
+.form-check-input[type="radio"] {
+appearance: none;
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #FF6D2C;
+border-radius: 50%;
+background-color: white;
+cursor: pointer;
+position: relative;
+}
+
+/* Add Inner Dot */
+.form-check-input[type="radio"]:checked {
+background-color: #FF6D2C;
+border-color: #FF6D2C;
+}
+
+/* Submit Button */
+.btn-orange {
+  background: #FF6D2C;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background: #ffffff;
+  color: black;
+  border: 2px solid #2E2F35;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  position: relative;
+}
+
+
+.upload-btn{
+cursor: pointer;
+}
+
+
+.upload-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+
+/* Map Section Adjustments */
+.map {
+width: 100%;
+max-width: 1200px;
+margin: 20px auto 50px auto;
+padding-bottom: 50px;
+padding-top: 80px;
+}
+
+.imgmap {
+width: 100%;
+height: auto;
+display: block;
+}
+
+/* FAQ Section */
+.faq-section {
+padding: 50px 20px;
+background: #FFFFFF;
+text-align: center;
+}
+
+
+
+.faq-title {
+font-size: 36px;
+font-weight: 600;
+}
+
+.faq-subtitle {
+font-size: 18px;
+color: #545454;
+margin-bottom: 30px;
+}
+
+.faq-box {
+max-width: 800px;
+margin: auto;
+text-align: left;
+}
+
+.faq-item {
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+padding: 15px;
+border-bottom: 1px solid #E5ECF4;
+}
+
+.faq-question {
+display: flex;
+align-items: center;
+gap: 15px;
+font-size: 18px;
+font-weight: 500;
+}
+
+.faq-answer {
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+color: #343D48;
+margin-top: 10px;
+}
+
+.faq-icon img {
+width: 20px;
+height: 20px;
+}
+
+
+
+.newsletter-section {
+background: #F3FAFA;
+padding: 80px 0;
+text-align: center;
+}
+.newsletter-title {
+font-weight: 600;
+font-size: 58px;
+color: #1F1F1F;
+}
+.newsletter-subtitle {
+font-weight: 500;
+font-size: 24px;
+color: #545454;
+margin: 20px 0;
+}
+.newsletter-box {
+max-width: 900px;
+margin: 0 auto;
+background: #FFFFFF;
+box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.14);
+border-radius: 4px;
+display: flex;
+padding: 15px;
+align-items: center;
+}
+.newsletter-box img {
+width: 24px;
+height: 24px;
+margin-right: 10px;
+}
+
+.newsletter-box input {
+flex: 1;
+padding: 20px;
+font-size: 20px;
+font-weight: 500;
+border: none;
+outline: none;
+color: #8C8C8C;
+background-color: #ffffff;
+}
+
+.newsletter-box button {
+background: #FF6D2C;
+color: #fff;
+font-weight: 600;
+font-size: 24px;
+border: none;
+border-radius: 4px;
+padding: 15px 40px;
+}
+
+
+.services-section {
+background: #FFFFFF;
+padding: 40px 60px;
+}
+.service-title {
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 24px;
+color: #1F1F1F;
+}
+.service-item {
+font-family: 'Inter', sans-serif;
+font-weight: 500;
+font-size: 17px;
+color: #1F1F1F;
+}
+.social-icons a {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 36px;
+height: 36px;
+background: #313131;
+border-radius: 4px;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+/* Contact Header */
+.contact-header h1 {
+  font-size: 36px;
+}
+
+.underline-img {
+  width: 80px; /* Adjust for smaller screens */
+}
+
+/* Form Section */
+.form-container {
+  width: 95%; /* Make form more responsive */
+  max-width: 100%;
+  padding: 30px 15px;
+  margin-top: 20px;
+  min-height: 100vh;
+}
+
+.form-title {
+  font-size: 24px;
+}
+
+.form-control, .form-check-input, .btn-orange, .upload-btn {
+  width: 100%; /* Ensure inputs take full width on small screens */
+  margin-bottom: 10px; /* Add spacing between elements */
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.faq-title {
+  font-size: 28px;
+}
+
+/* FAQ Section */
+.faq-item {
+  padding: 10px; /* Reduce padding */
+}
+
+.faq-question {
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Map Section */
+.map {
+  padding-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.imgmap {
+  width: 100%;
+  height: auto;
+}
+
+/* Newsletter Section */
+.newsletter-title {
+  font-size: 36px; /* Adjust for mobile */
+}
+
+.newsletter-subtitle {
+  font-size: 18px;
+}
+
+/* Service Section */
+.service-title {
+  font-size: 20px;
+}
+
+.service-item {
+  font-size: 18px;
+}
+
+.newsletter-box {
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+}
+
+.newsletter-box input {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.newsletter-box button {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+/* Social Icons */
+.social-icons a {
+  width: 30px;
+  height: 30px;
+}
+
+/* Adjust terms and submit button visibility */
+.form-check-label,
+.btn-orange {
+  display: block;
+  width: 100%;
+  margin-top: 15px; /* Adds spacing */
+}
+
+footer {
+  text-align: center;
+}
+}
+

@@ -1,0 +1,127 @@
+/* Background Color */
+.bg-light-blue {
+  background: #ECF3F3;
+}
+
+/* Form Container */
+.form-container {
+  background: #FDF3EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 1000px;
+  padding: 40px;
+  margin: auto;
+  position: relative;
+  overflow: auto;
+}
+
+/* Form Title */
+.form-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #2E2F35;
+}
+
+/* Input Fields */
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #808080 !important;
+  font-size: 16px;
+  color: #2E2F35;
+  background-color: #FDF3EA;
+  height: 50px;
+  padding: 10px;
+}
+
+/* Customize Checkbox */
+.form-check-input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #FF6D2C;
+border-radius: 4px;
+background-color: white;
+cursor: pointer;
+position: relative;
+}
+
+/* Add Checkmark */
+.form-check-input[type="checkbox"]:checked {
+background-color: #FF6D2C;
+border-color: #FF6D2C;
+}
+
+/* Customize Radio Button */
+.form-check-input[type="radio"] {
+appearance: none;
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #FF6D2C;
+border-radius: 50%;
+background-color: white;
+cursor: pointer;
+position: relative;
+}
+
+/* Add Inner Dot */
+.form-check-input[type="radio"]:checked {
+background-color: #FF6D2C;
+border-color: #FF6D2C;
+}
+
+/* Submit Button */
+
+.btn-secondary {
+  background-color: #ccc; /* Replace with your desired disabled color */
+  color: #666;
+}
+
+.btn-orange {
+  background: #FF6D2C;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background: #ffffff;
+  color: black;
+  border: 2px solid #2E2F35;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  position: relative;
+}
+
+.invalid-field {
+  border: 2px solid red;
+}
+
+
+.upload-btn{
+cursor: pointer;
+}
+
+
+.upload-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}

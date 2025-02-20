@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ConStyle.css">
+</head>
+<body>
+    <header class="header-container fixed-top shadow-sm bg-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo-container">
+                <a href="Home.html"><img src="Images/logo.jpg" alt="PostPilot Logo" class="logo"></a>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <button class="btn btn-outline-dark menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                ☰
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="navigation d-flex gap-4">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a class="dropdown-item" href="#">Resource 1</a></li>
+                        <li><a class="dropdown-item" href="#">Resource 2</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Success stories</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Company
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="companyDropdown">
+                        <li><a class="dropdown-item" href="#">About</a></li>
+                        <li><a class="dropdown-item" href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Pricing</a>
+                </div>
+            </nav>
+
+            <!-- Desktop Authentication buttons -->
+            <div class="auth-buttons d-flex gap-3">
+                <a href="#" class="btn btn-outline-dark login">Login</a>
+                <a href="#" class="btn btn-warning create-account">Create free account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li><a href="Home.html" class="nav-link">Home</a></li>
+                <li><a class="nav-link" href="#">Resources</a></li>
+                <li><a class="nav-link" href="#">Success stories</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="Contact.html">Contact Us</a></li>
+                <li><a class="nav-link" href="#">Pricing</a></li>
+            </ul>
+            <hr>
+            <div class="d-flex flex-column gap-3">
+                <a href="#" class="btn btn-outline-dark login">Login</a>
+                <a href="#" class="btn btn-warning create-account">Create free account</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <!-- Contact Header -->
+        <div class="contact-header d-flex align-items-center">
+            <img src="Images/Contact Us/Line 1.png" class="underline-img">
+            <h1 class="ms-3">Contact Us</h1>  
+        </div>
+
+        <div class="row mt-5">
+            <!-- Address Section -->
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-4 mb-md-0">
+                <img src="Images/Contact Us/Vector (1).png" alt="Location Icon" class="icon-img">
+                <div class="ms-3 text-center text-md-start">
+                    <h3>Address</h3>
+                    <p>Jaipur, Rajasthan INDIA<br>Pin 342087</p>
+                </div>
+            </div>
+        
+            <!-- Call Us Section -->
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-center align-items-center mb-4 mb-md-0">
+                <img src="Images/Contact Us/Vector (2).png" alt="Phone Icon" class="icon-img">
+                <div class="ms-3 text-center text-md-start">
+                    <h3>Call Us</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+        
+            <!-- Email Us Section -->
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center mb-4 mb-md-0">
+                <img src="Images/Contact Us/Vector.png" alt="Email Icon" class="icon-img">
+                <div class="ms-3 text-center text-md-start">
+                    <h3>Email Us</h3>
+                    <p>info@test.com</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+     <!-- Background Section -->
+    <div class="container-fluid bg-light-blue py-5">
+        <div class="container text-center">
+            <h2 class="form-title">Get in touch with us.<br>We're here to assist you.</h2>
+        </div>
+
+        <!-- Form Container -->
+        <div class="container form-container p-4">
+            <form>
+                <div class="row mb-3">
+                    <!-- Full Name -->
+                    <div class="col-md-6">
+                        <label class="form-label">Full name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- Email Address -->
+                    <div class="col-md-6">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <!-- Phone Number -->
+                    <div class="col-md-6">
+                        <label class="form-label">Phone number</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- Date of Birth -->
+                    <div class="col-md-6">
+                        <label class="form-label">Date of birth</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                        <label class="form-label">Gender</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- City -->
+                    <div class="col-md-6">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <!-- State -->
+                    <div class="col-md-6">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- Country -->
+                    <div class="col-md-6">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <!-- Address -->
+                    <div class="col-md-6">
+                        <label class="form-label">Address</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- Message -->
+                    <div class="col-md-6">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <!-- Request a Counseling Session -->
+                    <div class="col-md-6">
+                        <label class="form-label d-block">Request a counselling session</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="counseling" value="yes">
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="counseling" value="no">
+                            <label class="form-check-label">No</label>
+                        </div>
+                    </div>
+                    <!-- Upload Resume -->
+                    <div class="col-md-6">
+                        <label class="form-label">Upload your CV/Resume</label>
+                        <div class="custom-file-upload">
+                            <input type="file" id="fileUpload" class="form-control" hidden>
+                            <label for="fileUpload" class="upload-btn">
+                                <img src="Images/Contact Us/upload.png" alt="Upload Icon" class="upload-icon"> 
+                                Choose File
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="terms">
+                    <label class="form-check-label" for="terms">Agree terms and conditions</label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-orange">Submit Information</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="map">
+        <img class="imgmap" src="Images/Contact Us/image 18.png" alt="Description of image">
+    </div>
+    
+
+
+    <section class="faq-section">
+        <!-- FAQ Background Rectangle -->
+        <div class="faq-bg"></div>
+
+        <!-- FAQ Title -->
+        <div class="faq-container text-center">
+            <h1 class="faq-title">Do you have any quesiton</h1>
+            <p class="faq-subtitle">Our support team ready to help you, please contact with them</p>
+        </div>
+
+        <!-- FAQ Content -->
+        <div class="container faq-box">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">
+                        <img src="Images/Contact Us/FAQ Icon.png">
+                    </div>
+                    <p>How to contact with riders in an emergency?</p>
+                </div>
+                <div class="faq-divider"></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">
+                        <img src="Images/Contact Us/FAQ Icon.png">
+                    </div>
+                    <p>App installation failed, how to update system information?</p>
+                </div>
+                <div class="faq-divider"></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">
+                        <img src="Images/Contact Us/FAQ Icon.png">
+                    </div>
+                    <p>Website response taking time, how to improve?</p>
+                </div>
+                <p class="faq-answer">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your
+                    blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests
+                    delivered at the home.
+                </p>
+                <div class="faq-divider"></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">
+                        <img src="Images/Contact Us/FAQ Icon.png">
+                    </div>
+                    <p>New update fixed all bugs and issues</p>
+                </div>
+                <div class="faq-divider"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newsletter-section">
+        <div class="container text-center">
+            <h2 class="newsletter-title">Subscribe to Our Newsletter<br>for Design Insights</h2>
+            <p class="newsletter-subtitle">Be the first to discover trends, inspirations, and special offers as<br>we bring the world of design directly to your inbox</p>
+            <div class="newsletter-box">
+                <img src="Images/Contact Us/mailicon.png" alt="Email Icon">
+                <input type="email" class="form-control border-0" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services-section container">
+        <div class="row">
+            <!-- First Column (Centered on Mobile) -->
+            <div class="col-12 col-md-3 text-center text-md-start mb-4 mb-md-0">
+                <img src="Images/Contact Us/Logo.png" alt="Logo">
+                <p class="service-item">VivaDecor your premier destination for luxury and modern interior design.</p>
+                <div class="social-icons d-flex justify-content-center gap-2">
+                    <a href="#"><img src="Images/Contact Us/FB.png" alt="Facebook"></a>
+                    <a href="#"><img src="Images/Contact Us/Twit.png" alt="Twitter"></a>
+                    <a href="#"><img src="Images/Contact Us/Insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="Images/Contact Us/Linkdin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+    
+            <!-- Remaining Columns (Stacked Horizontally in Mobile) -->
+            <div class="col-12 col-md-9">
+                <div class="row">
+                    <!-- Services Column -->
+                    <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                        <h4 class="service-title">Our Services</h4>
+                        <p class="service-item">Interior Design</p>
+                        <p class="service-item">Lighting Design</p>
+                        <p class="service-item">Outdoor Design</p>
+                        <p class="service-item">Office Design</p>
+                    </div>
+    
+                    <!-- Company Column -->
+                    <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                        <h4 class="service-title">Company</h4>
+                        <p class="service-item">Reviews</p>
+                        <p class="service-item">Pricing</p>
+                        <p class="service-item">Careers</p>
+                        <p class="service-item">Press Inquiries</p>
+                    </div>
+    
+                    <!-- Contact Column -->
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <h4 class="service-title">Contact</h4>
+                        <p class="service-item">info@vivadecor.com</p>
+                        <p class="service-item">Design Avenue, Cityville, CA 90210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
