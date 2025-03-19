@@ -19,7 +19,7 @@ import SummaryCard from "./components/SummaryCard";
 // - Animate view of forcast https://www.framer.com/api/motion/
 
 function App() {
-  const API_KEY = "649d83207b4ce5fd614302265b4b7642";
+  const API_KEY = "your-new-api-key";
   // let REACT_APP_ICON_URL="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0]["icon"]}.svg";
   const [noData, setNoData] = useState("No data yet");
   const [searchTerm, setSearchTerm] = useState("");
