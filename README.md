@@ -6,7 +6,7 @@ This repository tracks my progress through the **Web Development Training Progra
 
 ## 📚 Training Modules
 
-1. **Static UI Development** (✅ Completed) 
+1. **Static UI Development** (✅ Completed)
    - Learn HTML and CSS fundamentals.
    - Work with responsive design principles.
    - Explore frameworks like **Tailwind CSS** and **Bootstrap**.
