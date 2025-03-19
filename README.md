@@ -6,25 +6,25 @@ This repository tracks my progress through the **Web Development Training Progra
 
 ## 📚 Training Modules
 
-1. **Static UI Development** (▶️ Current Module)
+1. **Static UI Development** (✅ Completed) 
    - Learn HTML and CSS fundamentals.
    - Work with responsive design principles.
    - Explore frameworks like **Tailwind CSS** and **Bootstrap**.
    - Task: Build a complete responsive website.
 
-2. **JavaScript**
+2. **JavaScript** (✅ Completed)
    - Understand JavaScript basics, DOM manipulation, and the Fetch API.
    - Learn form handling and validation.
    - Task: Create a dynamic contact form.
 
-3. **React**
+3. **React** (✅ Completed)
    - Learn about component-based architecture and state management.
    - Handle events and integrate APIs.
    - Tasks:
      - Build a **Student Registration Form**.
      - Create a **Weather App** using React.
 
-4. **Backend Basics**
+4. **Backend Basics** (▶️ Current Module)
    - Introduction to backend concepts like REST APIs and MVC architecture.
    - Learn about MongoDB, authentication, and CRUD operations.
    - Task: Build a simple REST API.
