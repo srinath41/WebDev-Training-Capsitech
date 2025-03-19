@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import Student from "./models/Student.js";
+import Student from "./models/student.js";
 
 dotenv.config();
 const app = express();
