@@ -53,7 +53,7 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newErrors = {};
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
         if (!re.test(formData.email)) {
             newErrors.email = 'Invalid email format.';
         }
