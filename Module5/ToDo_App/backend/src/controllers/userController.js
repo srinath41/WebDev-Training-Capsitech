@@ -6,7 +6,7 @@ const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
 
-// Register a new user
+// Register a new user (Defaults to isActive: true)
 const registerUser = async (req, res) => {
     const { name, email, password, role } = req.body;
 
@@ -16,13 +16,14 @@ const registerUser = async (req, res) => {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        const user = await User.create({ name, email, password, role });
+        const user = await User.create({ name, email, password, role, isActive: true }); // Set default
 
         res.status(201).json({
             _id: user.id,
             name: user.name,
             email: user.email,
             role: user.role,
+            isActive: user.isActive, // Include in response
             token: generateToken(user.id),
         });
     } catch (error) {
@@ -30,7 +31,7 @@ const registerUser = async (req, res) => {
     }
 };
 
-// User Login
+// User Login (Prevent inactive users from logging in)
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -40,11 +41,16 @@ const loginUser = async (req, res) => {
             return res.status(401).json({ message: "Invalid email or password" });
         }
 
+        if (!user.isActive) {
+            return res.status(403).json({ message: "Account is inactive. Contact admin." });
+        }
+
         res.json({
             _id: user.id,
             name: user.name,
             email: user.email,
             role: user.role,
+            isActive: user.isActive, // Include in response
             token: generateToken(user.id),
         });
     } catch (error) {
@@ -53,11 +59,37 @@ const loginUser = async (req, res) => {
 };
 
 // Get all users (Admin only)
-const getUsers = async (req, res) => {
+const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find();
-        res.json(users);
+        const users = await User.find().select("-password"); // Exclude password
+        res.status(200).json(users);
     } catch (error) {
+        res.status(500).json({ message: "Failed to fetch users", error });
+    }
+};
+
+// Update a user (Admin only, allows changing isActive)
+const updateUser = async (req, res) => {
+    console.log("Incoming PUT request:", req.params.id, req.body);
+
+    try {
+        const { name, email, role, isActive } = req.body; // Accept isActive
+        console.log("Received data:", { name, email, role, isActive });
+
+        const updatedUser = await User.findByIdAndUpdate(
+            req.params.id,
+            { name, email, role, isActive }, // Allow isActive update
+            { new: true, runValidators: true }
+        );
+
+        if (!updatedUser) {
+            console.log("User not found");
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json(updatedUser);
+    } catch (error) {
+        console.error("Server error:", error);
         res.status(500).json({ message: "Server error" });
     }
 };
@@ -65,11 +97,16 @@ const getUsers = async (req, res) => {
 // Delete a user (Admin only)
 const deleteUser = async (req, res) => {
     try {
-        await User.findByIdAndDelete(req.params.id);
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        await user.deleteOne();
         res.json({ message: "User deleted successfully" });
     } catch (error) {
         res.status(500).json({ message: "Server error" });
     }
 };
 
-module.exports = { registerUser, loginUser, getUsers, deleteUser };
+module.exports = { registerUser, loginUser, deleteUser, getAllUsers, updateUser };

@@ -1,21 +1,24 @@
 const express = require("express");
 const {
     createTask,
-    getTasksByProject,
-    getTaskById,
+    getTasks,
     updateTask,
     deleteTask,
-    updateTaskStatus,
 } = require("../controllers/taskController");
 const { protect, isAdmin } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-router.post("/", protect, isAdmin, createTask);  // Create task (Admin)
-router.get("/project/:projectId", getTasksByProject);  // Get tasks for a project
-router.get("/:id", getTaskById);  // Get task by ID
-router.put("/:id", protect, isAdmin, updateTask);  // Update task (Admin)
-router.delete("/:id", protect, isAdmin, deleteTask);  // Delete task (Admin)
-router.put("/:id/status", protect, updateTaskStatus);  // Update task status (Assigned user)
+// Get all tasks for a project
+router.get("/:projectId", protect, getTasks);
+
+// ✅ Ensure this route is correctly defined  
+router.post("/:projectId", protect, isAdmin, createTask);
+
+// Update a task (Assigned users & Admin can update)
+router.put("/:taskId", protect, updateTask);
+
+// Delete a task (Admin only, soft delete)
+router.delete("/:taskId", protect, isAdmin, deleteTask);
 
 module.exports = router;
