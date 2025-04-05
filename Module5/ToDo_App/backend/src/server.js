@@ -26,7 +26,7 @@ const createAdminUser = async () => {
       const admin = new User({
         name: process.env.ADMIN_NAME || "Admin",
         email: process.env.ADMIN_EMAIL || "admin@example.com",
-        password: bcrypt.hashSync(process.env.ADMIN_PASSWORD || "Admin@123", 10),
+        password: process.env.ADMIN_PASSWORD || "Admin@123",
         role: "admin",
         isActive: true,
       });
