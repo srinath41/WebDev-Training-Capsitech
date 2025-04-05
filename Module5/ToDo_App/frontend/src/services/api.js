@@ -9,9 +9,15 @@ const API = axios.create({
 // =======================
 
 export const loginUser = async (credentials) => {
-  const response = await API.post("users/login", credentials);
-  return response.data;
-};
+    try {
+      const response = await API.post("users/login", credentials);
+      return response.data;
+    } catch (error) {
+        console.error("Login failed:", error.response?.data?.message || error.message);
+        throw new Error(error.response?.data?.message || "Login failed. Please try again.");
+    }
+  };
+  
 
 export const registerUser = async (userData) => {
   const response = await API.post("users/register", userData);

@@ -3,8 +3,8 @@ const Project = require("../models/projectModel");
 
 const getTasks = async (req, res) => {
     try {
-      const userId = req.user.id; // Authenticated user ID
-      const isAdmin = req.user.role === "admin"; // Check if user is an admin
+      const userId = req.user.id;
+      const isAdmin = req.user.role === "admin";
   
       // Check if the user is part of the project
       const project = await Project.findOne({
@@ -37,7 +37,6 @@ const getTasks = async (req, res) => {
   };
   
 
-// Create a task (Admin Only)
 const createTask = async (req, res) => {
     const { taskTitle, taskDescription, taskStatus, startDate, endDate, assignedUsers } = req.body;
     const projectId = req.params.projectId; // Extract projectId from URL
@@ -54,7 +53,7 @@ const createTask = async (req, res) => {
             taskStatus: taskStatus || "Pending",
             startDate,
             endDate,
-            projectId,  // Now correctly linked to the project
+            projectId,
             assignedUsers,
             createdBy,
         });
@@ -68,12 +67,11 @@ const createTask = async (req, res) => {
 };
 
 
-// Update task status (Assigned users & Admin)
 const updateTask = async (req, res) => {
     const { taskId } = req.params;
     const { taskTitle, taskDescription, taskStatus, startDate, endDate, assignedUsers, isDelete } = req.body;
-    const userId = req.user.id; // Authenticated user ID
-    const isAdmin = req.user.role === "admin"; // Check if user is an admin
+    const userId = req.user.id;
+    const isAdmin = req.user.role === "admin";
   
     try {
       let task = await Task.findById(taskId);
@@ -82,9 +80,9 @@ const updateTask = async (req, res) => {
       }
   
       if (isAdmin) {
-        // Admin can update everything including soft delete
         task.taskTitle = taskTitle ?? task.taskTitle;
         task.taskDescription = taskDescription ?? task.taskDescription;
+        task.taskStatus = taskStatus ?? task.taskStatus;
         task.startDate = startDate ?? task.startDate;
         task.endDate = endDate ?? task.endDate;
         task.assignedUsers = assignedUsers ?? task.assignedUsers;
@@ -104,7 +102,6 @@ const updateTask = async (req, res) => {
     }
 };
 
-// Delete a task (Permanent delete, Admin only)
 const deleteTask = async (req, res) => {
   try {
     const task = await Task.findById(req.params.taskId);

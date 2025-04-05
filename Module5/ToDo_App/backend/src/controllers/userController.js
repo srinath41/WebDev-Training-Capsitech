@@ -6,7 +6,6 @@ const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
 
-// Register a new user (Defaults to isActive: true)
 const registerUser = async (req, res) => {
     const { name, email, password, role } = req.body;
 
@@ -23,7 +22,7 @@ const registerUser = async (req, res) => {
             name: user.name,
             email: user.email,
             role: user.role,
-            isActive: user.isActive, // Include in response
+            isActive: user.isActive,
             token: generateToken(user.id),
         });
     } catch (error) {
@@ -31,7 +30,6 @@ const registerUser = async (req, res) => {
     }
 };
 
-// User Login (Prevent inactive users from logging in)
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -50,7 +48,7 @@ const loginUser = async (req, res) => {
             name: user.name,
             email: user.email,
             role: user.role,
-            isActive: user.isActive, // Include in response
+            isActive: user.isActive,
             token: generateToken(user.id),
         });
     } catch (error) {
@@ -58,7 +56,6 @@ const loginUser = async (req, res) => {
     }
 };
 
-// Get all users (Admin only)
 const getAllUsers = async (req, res) => {
     try {
         const users = await User.find().select("-password"); // Exclude password
@@ -68,7 +65,6 @@ const getAllUsers = async (req, res) => {
     }
 };
 
-// Update a user (Admin only, allows changing isActive)
 const updateUser = async (req, res) => {
     console.log("Incoming PUT request:", req.params.id, req.body);
 
@@ -94,7 +90,6 @@ const updateUser = async (req, res) => {
     }
 };
 
-// Delete a user (Admin only)
 const deleteUser = async (req, res) => {
     try {
         const user = await User.findById(req.params.id);

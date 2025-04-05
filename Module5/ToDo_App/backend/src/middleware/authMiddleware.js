@@ -15,8 +15,6 @@ const protect = async (req, res, next) => {
         if (!user) {
             return res.status(401).json({ message: "User not found" });
         }
-
-        // ❌ Block inactive users
         if (!user.isActive) {
             return res.status(403).json({ message: "Account is inactive. Contact admin." });
         }

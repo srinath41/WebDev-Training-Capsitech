@@ -4,30 +4,48 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
+const bcrypt = require("bcryptjs");
+const User = require("./models/userModel")
 
-// Initialize Express
 const app = express();
 
-// Middleware
-app.use(express.json());  // Parse JSON body
-app.use(cors());          // Enable CORS for frontend requests
-app.use(helmet());        // Security headers
-app.use(morgan("dev"));   // Logs API requests
+app.use(express.json());
+app.use(cors());        
+app.use(helmet());   
+app.use(morgan("dev"));
 
-// Connect to Database
-connectDB();
+connectDB().then(() => {
+    createAdminUser();
+});
 
-// Define Routes (Will implement later)
+const createAdminUser = async () => {
+    try {
+      const existingAdmin = await User.findOne({ role: "admin" });
+      if (existingAdmin) return;
+  
+      const admin = new User({
+        name: process.env.ADMIN_NAME || "Admin",
+        email: process.env.ADMIN_EMAIL || "admin@example.com",
+        password: bcrypt.hashSync(process.env.ADMIN_PASSWORD || "Admin@123", 10),
+        role: "admin",
+        isActive: true,
+      });
+  
+      await admin.save();
+      console.log("Default admin user created.");
+    } catch (error) {
+      console.error("Error creating admin user:", error);
+    }
+  };
+  
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/projects", require("./routes/projectRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
-// Home Route
 app.get("/", (req, res) => {
     res.send("To-Do App API is running...");
 });
 
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

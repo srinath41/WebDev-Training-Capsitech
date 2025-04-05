@@ -1,14 +1,10 @@
 const Project = require("../models/projectModel");
 const mongoose = require("mongoose");
 
-// Create a new project (Admin only)
 const createProject = async (req, res) => {
     try {
       const { title, description, category, assignedUsers, startDate, endDate, projectStatus, isDelete} = req.body;
-      const createdBy = req.user.id; // Assuming the user is authenticated
-  
-      console.log("Received Data:", req.body); // ✅ Debugging log
-  
+      const createdBy = req.user.id;  
       const newProject = new Project({
         title,
         description,
@@ -20,10 +16,8 @@ const createProject = async (req, res) => {
         projectStatus: projectStatus || "Pending",
         isDelete: false,
       });
-  
       const savedProject = await newProject.save();
-      console.log("Saved Project:", savedProject); // ✅ Check if assignedUsers exists
-  
+      console.log("Saved Project:", savedProject);
       res.status(201).json(savedProject);
     } catch (error) {
       console.error("Error creating project:", error);
@@ -31,18 +25,15 @@ const createProject = async (req, res) => {
     }
   };
   
-// Get all projects (Include assigned users)
 const getProjects = async (req, res) => { 
     try {
-        // Get user role from request
         const userId = req.user?._id;
-        const userRole = req.user?.role;  // Assuming role is stored in `req.user`
+        const userRole = req.user?.role; 
         console.log("User Info:", req.user);
 
 
         let projects;
         if (userRole === "admin") {
-            // Admins can see all projects
             projects = await Project.find()
                 .populate("createdBy", "name email")
                 .populate("assignedUsers", "name email");
@@ -59,8 +50,6 @@ const getProjects = async (req, res) => {
     }
 };
 
-
-// Get a single project (Include assigned users)
 const getProjectById = async (req, res) => {
     try {
         const project = await Project.findById(req.params.id)
@@ -79,7 +68,6 @@ const getProjectUsers = async (req, res) => {
     try {
         const { id } = req.params;
 
-        // Validate if ID is a valid MongoDB ObjectId
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ message: "Invalid project ID" });
         }
@@ -96,16 +84,13 @@ const getProjectUsers = async (req, res) => {
     }
 };
 
-// Update a project (Only Admin or Project Creator)
 const updateProject = async (req, res) => {
     try {
         const { title, description, category, assignedUsers, endDate, projectStatus, isDelete } = req.body;
 
-        // Find the project
         const project = await Project.findById(req.params.id);
         if (!project) return res.status(404).json({ message: "Project not found" });
 
-        // Update project fields
         const updatedProject = await Project.findByIdAndUpdate(
             req.params.id,
             {
@@ -113,11 +98,11 @@ const updateProject = async (req, res) => {
                 description: description || project.description,
                 category: category || project.category,
                 assignedUsers: assignedUsers || project.assignedUsers,
-                endDate: endDate || project.endDate,  // ✅ Ensure `endDate` updates
-                projectStatus: projectStatus || project.projectStatus, // ✅ Ensure `projectStatus` updates
-                isDelete: isDelete !== undefined ? isDelete : project.isDelete, // ✅ Ensure `isDelete` updates
+                endDate: endDate || project.endDate,
+                projectStatus: projectStatus || project.projectStatus,
+                isDelete: isDelete !== undefined ? isDelete : project.isDelete,
             },
-            { new: true } // ✅ Returns updated document
+            { new: true }
         );
 
         res.json(updatedProject);
@@ -126,8 +111,6 @@ const updateProject = async (req, res) => {
     }
 };
 
-
-// Delete a project (Admin only)
 const deleteProject = async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
