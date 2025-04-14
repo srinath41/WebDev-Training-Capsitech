@@ -110,7 +110,7 @@ const ProjectDetails = () => {
         <div className="fixed inset-0 bg-black/20 z-10"></div>
       )}
 
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-6xl mx-auto space-y-6">
         <div className="bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-8">
             <div className="flex justify-between items-start mb-6">

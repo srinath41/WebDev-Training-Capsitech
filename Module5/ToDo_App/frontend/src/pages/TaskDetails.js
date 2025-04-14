@@ -13,7 +13,45 @@ const TaskDetails = ({ projectId }) => {
   const [allUsers, setAllUsers] = useState([]);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
+  const [searchTaskTerm, setSearchTaskTerm] = useState("");
+const [sortBy, setSortBy] = useState("name");
+const [sortOrder, setSortOrder] = useState("asc");
+const [taskStatusFilter, setTaskStatusFilter] = useState("All");
+
+
   const isAdmin = user?.role === "admin";
+
+
+  const filteredTasks = tasks
+  .filter((task) => {
+    const statusMatch =
+      taskStatusFilter === "All" ||
+      task.taskStatus.toLowerCase() === taskStatusFilter.toLowerCase() ||
+      (taskStatusFilter === "Deleted" && task.isDelete);
+
+    const searchMatch =
+      task.taskTitle.toLowerCase().includes(searchTaskTerm.toLowerCase()) ||
+      task.assignedUsers.some((user) =>
+        user.name.toLowerCase().includes(searchTaskTerm.toLowerCase())
+      );
+
+    return statusMatch && searchMatch;
+  })
+  .sort((a, b) => {
+    if (sortBy === "name") {
+      return sortOrder === "asc"
+        ? a.taskTitle.toLowerCase().localeCompare(b.taskTitle.toLowerCase())
+        : b.taskTitle.toLowerCase().localeCompare(a.taskTitle.toLowerCase());
+    } else if (sortBy === "endDate") {
+      return sortOrder === "asc"
+        ? new Date(a.endDate) - new Date(b.endDate)
+        : new Date(b.endDate) - new Date(a.endDate);
+    } else {
+      return 0; // No sorting applied
+    }
+  });
+
+
 
   useEffect(() => {
     const getTasks = async () => {
@@ -92,11 +130,91 @@ const TaskDetails = ({ projectId }) => {
   };
   return (
     <div className="space-y-6">
+      <div className="flex flex-wrap items-center gap-3 mb-6 w-full bg-white rounded-lg shadow-xs">
+  {/* Search Input with Icon */}
+  <div className="relative flex-1 min-w-[200px]">
+    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+    <input
+      type="text"
+      value={searchTaskTerm}
+      onChange={(e) => setSearchTaskTerm(e.target.value)}
+      placeholder="Search tasks or users..."
+      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+    />
+  </div>
+
+  {/* Sort By */}
+  <div className="relative">
+    <select
+      value={sortBy}
+      onChange={(e) => setSortBy(e.target.value)}
+      className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white min-w-[150px]"
+    >
+      <option value="">Sort by</option>
+      <option value="name">Name</option>
+      <option value="endDate">Due Date</option>
+    </select>
+    <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Status Filter */}
+  <div className="relative">
+    <select
+      value={taskStatusFilter}
+      onChange={(e) => setTaskStatusFilter(e.target.value)}
+      className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white min-w-[150px]"
+    >
+      <option value="All">All Status</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+      {user?.role === "admin" && <option value="Deleted">Deleted</option>}
+    </select>
+    <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Sort Order */}
+  <button
+    onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
+    className="flex items-center justify-center gap-1 px-3 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors min-w-[100px]"
+  >
+    {sortOrder === "asc" ? (
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+        </svg>
+    ) : (
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+        </svg>
+    )}
+  </button>
+
+  
+</div>
+
 
   {tasks.length > 0 ? (
     <div className="space-y-4">
-      {tasks.map((task) => (
-        <div key={task._id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden">
+      {filteredTasks.map((task) => (
+        <div
+        key={task._id}
+        className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden ${
+          task.isDelete ? "opacity-30" : ""
+        }`}
+      >
+      
           {/* Task Header */}
           <button
             onClick={() => toggleTaskDetails(task._id)}

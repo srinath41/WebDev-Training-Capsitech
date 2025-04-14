@@ -77,14 +77,19 @@ const Dashboard = () => {
     return statusMatch && project.title.toLowerCase().includes(searchProjectTerm.toLowerCase());
   })
     .sort((a, b) => {
+      const getSortableTitle = (title) =>
+        title.toLowerCase().replace(/^(a |an |the )/i, "").trim();
+
       if (sortBy === "title") {
         return sortProjectOrder === "asc"
-          ? a.title.localeCompare(b.title)
-          : b.title.localeCompare(a.title);
-      } else {
+        ? getSortableTitle(a.title).localeCompare(getSortableTitle(b.title))
+        : getSortableTitle(b.title).localeCompare(getSortableTitle(a.title));
+      } else if (sortBy === "endDate") {
         return sortProjectOrder === "asc"
-          ? new Date(a.startDate) - new Date(b.startDate)
-          : new Date(b.startDate) - new Date(a.startDate);
+          ? new Date(a.endDate) - new Date(b.endDate)
+          : new Date(b.endDate) - new Date(a.endDate);
+      } else {
+        return 0; // No sorting applied
       }
     });
 
@@ -375,7 +380,7 @@ const Dashboard = () => {
         
               <button
                 onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
-                className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2.5 rounded-lg transition-colors"
+                className="flex items-center gap-1 border border-gray-300 rounded-lg px-3 py-2 text-sm hover:bg-gray-50 transition-colors"
               >
                 {sortOrder === "asc" ? (
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -386,7 +391,6 @@ const Dashboard = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                   </svg>
                 )}
-                Sort
               </button>
             </div>
           </div>
@@ -550,7 +554,7 @@ const Dashboard = () => {
   {/* Header Section */}
   <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
     <div>
-      <h3 className="text-2xl font-bold text-gray-900">Project Overview</h3>
+      <h3 className="text-2xl font-bold text-gray-900">Projects Overview</h3>
       <p className="text-gray-500 text-sm mt-1">
         {filteredProjects.length} projects found
       </p>
@@ -594,9 +598,9 @@ const Dashboard = () => {
           onChange={(e) => setSortBy(e.target.value)}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         >
-          <option value="title">Sort by</option>
+          <option value="">Sort by</option>
           <option value="title">Name</option>
-          <option value="startDate">Date</option>
+          <option value="endDate">Date</option>
         </select>
 
         <button
@@ -612,7 +616,6 @@ const Dashboard = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
             </svg>
           )}
-          Sort
         </button>
       </div>
     </div>
@@ -691,7 +694,7 @@ const Dashboard = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span>
-                  {new Date(project.startDate).toLocaleDateString('en-US', {
+                  {new Date(project.endDate).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric'
