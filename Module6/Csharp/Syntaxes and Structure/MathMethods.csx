@@ -1,0 +1,13 @@
+double a = -12.75;
+double b = 5.4;
+int x = 6, y = 10;
+Console.WriteLine("=== Essential Math Methods ===\n");
+Console.WriteLine($"Math.Abs({a}) = {Math.Abs(a)}");        
+Console.WriteLine($"Math.Ceiling({b}) = {Math.Ceiling(b)}");
+Console.WriteLine($"Math.Floor({b}) = {Math.Floor(b)}");    
+Console.WriteLine($"Math.Round({b}) = {Math.Round(b)}");    
+Console.WriteLine($"Math.Max({x}, {y}) = {Math.Max(x, y)}");
+Console.WriteLine($"Math.Min({x}, {y}) = {Math.Min(x, y)}");
+Console.WriteLine($"Math.Pow({x}, 2) = {Math.Pow(x, 2)}");  
+Console.WriteLine($"Math.Sqrt({y}) = {Math.Sqrt(y)}");      
+Console.WriteLine($"Math.PI = {Math.PI}");              

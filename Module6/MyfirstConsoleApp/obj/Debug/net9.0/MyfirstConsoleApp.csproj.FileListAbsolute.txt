@@ -1,0 +1,15 @@
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\bin\Debug\net9.0\MyfirstConsoleApp.exe
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\bin\Debug\net9.0\MyfirstConsoleApp.deps.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\bin\Debug\net9.0\MyfirstConsoleApp.runtimeconfig.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\bin\Debug\net9.0\MyfirstConsoleApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\bin\Debug\net9.0\MyfirstConsoleApp.pdb
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.AssemblyInfoInputs.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.AssemblyInfo.cs
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.csproj.CoreCompileInputs.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.sourcelink.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\refint\MyfirstConsoleApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.pdb
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\MyfirstConsoleApp.genruntimeconfig.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\MyfirstConsoleApp\obj\Debug\net9.0\ref\MyfirstConsoleApp.dll

@@ -1,0 +1,15 @@
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\bin\Debug\net9.0\MyFirstApp.exe
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\bin\Debug\net9.0\MyFirstApp.deps.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\bin\Debug\net9.0\MyFirstApp.runtimeconfig.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\bin\Debug\net9.0\MyFirstApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\bin\Debug\net9.0\MyFirstApp.pdb
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.AssemblyInfoInputs.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.AssemblyInfo.cs
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.csproj.CoreCompileInputs.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.sourcelink.json
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\refint\MyFirstApp.dll
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.pdb
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\MyFirstApp.genruntimeconfig.cache
+D:\Codingss\Capsitech\WebDev-Training-Capsitech\Module6\Csharp\MyFirstApp\obj\Debug\net9.0\ref\MyFirstApp.dll
