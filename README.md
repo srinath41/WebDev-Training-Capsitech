@@ -24,22 +24,22 @@ This repository tracks my progress through the **Web Development Training Progra
      - Build a **Student Registration Form**.
      - Create a **Weather App** using React.
 
-4. **Backend Basics** (▶️ Current Module)
+4. **Backend Basics** (✅ Completed)
    - Introduction to backend concepts like REST APIs and MVC architecture.
    - Learn about MongoDB, authentication, and CRUD operations.
    - Task: Build a simple REST API.
 
-5. **Express.js**
+5. **Express.js** (✅ Completed)
    - Learn to use Express.js for API development.
    - Focus on routing, middleware, and creating a CRUD API for a to-do list.
    - Task: Build a To-Do List API.
 
-6. **C# and .NET Core**
+6. **C# and .NET Core** (✅ Completed)
    - Explore C# basics, object-oriented programming concepts, and threading.
    - Build APIs using .NET Core.
    - Task: Create a complete backend application using .NET Core.
 
-7. **Final Full-Stack Project**
+7. **Final Full-Stack Project (▶️ Current Module)**
    - Combine skills from all modules to build a **Task Management Application**.
    - Use React for the frontend, Express.js/.NET Core for the backend, and MongoDB for the database.
 
